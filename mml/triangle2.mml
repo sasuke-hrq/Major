@@ -1,0 +1,21 @@
+targetOp{
+
+    BIN(>)->{>=,!=,FALSE};
+    BIN(<)->{<=,!=,FALSE};
+    BIN(>=)->{>,==,TRUE};
+    BIN(<=)->{<,==,TRUE};
+    BIN(==)->{<=,>=,FALSE,LHS,RHS};
+    BIN(!=)->{<,>,TRUE,LHS,RHS};
+    BIN(||)->{!=,LHS,RHS,TRUE};
+    DEL(RETURN);
+    BIN (*) -> {/ ,%};
+    BIN (/) -> {* ,%};
+    BIN (+) -> {-};
+    BIN (-) -> {+};
+    AOR;
+    STD;
+    COR;
+    ROR;
+}
+targetOp<"triangle.UpgradedTriangle::area(int,int,int)">;
+

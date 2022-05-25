@@ -1,0 +1,52 @@
+1:ROR:<=(int,int):<(int,int):triangle.UpgradedTriangle@area(int,int,int):41:a <= 0 |==> a < 0
+2:ROR:<=(int,int):==(int,int):triangle.UpgradedTriangle@area(int,int,int):41:a <= 0 |==> a == 0
+3:ROR:<=(int,int):TRUE(int,int):triangle.UpgradedTriangle@area(int,int,int):41:a <= 0 |==> true
+4:ROR:<=(int,int):<(int,int):triangle.UpgradedTriangle@area(int,int,int):41:b <= 0 |==> b < 0
+5:ROR:<=(int,int):==(int,int):triangle.UpgradedTriangle@area(int,int,int):41:b <= 0 |==> b == 0
+6:ROR:<=(int,int):TRUE(int,int):triangle.UpgradedTriangle@area(int,int,int):41:b <= 0 |==> true
+7:COR:||(boolean,boolean):!=(boolean,boolean):triangle.UpgradedTriangle@area(int,int,int):41:a <= 0 || b <= 0 |==> a <= 0 != b <= 0
+8:COR:||(boolean,boolean):LHS(boolean,boolean):triangle.UpgradedTriangle@area(int,int,int):41:a <= 0 || b <= 0 |==> a <= 0
+9:COR:||(boolean,boolean):RHS(boolean,boolean):triangle.UpgradedTriangle@area(int,int,int):41:a <= 0 || b <= 0 |==> b <= 0
+10:COR:||(boolean,boolean):TRUE(boolean,boolean):triangle.UpgradedTriangle@area(int,int,int):41:a <= 0 || b <= 0 |==> true
+11:ROR:<=(int,int):<(int,int):triangle.UpgradedTriangle@area(int,int,int):41:c <= 0 |==> c < 0
+12:ROR:<=(int,int):==(int,int):triangle.UpgradedTriangle@area(int,int,int):41:c <= 0 |==> c == 0
+13:ROR:<=(int,int):TRUE(int,int):triangle.UpgradedTriangle@area(int,int,int):41:c <= 0 |==> true
+14:COR:||(boolean,boolean):!=(boolean,boolean):triangle.UpgradedTriangle@area(int,int,int):41:a <= 0 || b <= 0 || c <= 0 |==> (a <= 0 || b <= 0) != c <= 0
+15:COR:||(boolean,boolean):LHS(boolean,boolean):triangle.UpgradedTriangle@area(int,int,int):41:a <= 0 || b <= 0 || c <= 0 |==> a <= 0 || b <= 0
+16:COR:||(boolean,boolean):RHS(boolean,boolean):triangle.UpgradedTriangle@area(int,int,int):41:a <= 0 || b <= 0 || c <= 0 |==> c <= 0
+17:COR:||(boolean,boolean):TRUE(boolean,boolean):triangle.UpgradedTriangle@area(int,int,int):41:a <= 0 || b <= 0 || c <= 0 |==> true
+18:STD:<RETURN>:<NO-OP>:triangle.UpgradedTriangle@area(int,int,int):42:return 0; |==> <NO-OP>
+19:AOR:+(int,int):-(int,int):triangle.UpgradedTriangle@area(int,int,int):44:a + b |==> a - b
+20:ROR:<=(int,int):<(int,int):triangle.UpgradedTriangle@area(int,int,int):44:a + b <= c |==> a + b < c
+21:ROR:<=(int,int):==(int,int):triangle.UpgradedTriangle@area(int,int,int):44:a + b <= c |==> a + b == c
+22:ROR:<=(int,int):TRUE(int,int):triangle.UpgradedTriangle@area(int,int,int):44:a + b <= c |==> true
+23:AOR:+(int,int):-(int,int):triangle.UpgradedTriangle@area(int,int,int):44:a + c |==> a - c
+24:ROR:<=(int,int):<(int,int):triangle.UpgradedTriangle@area(int,int,int):44:a + c <= b |==> a + c < b
+25:ROR:<=(int,int):==(int,int):triangle.UpgradedTriangle@area(int,int,int):44:a + c <= b |==> a + c == b
+26:ROR:<=(int,int):TRUE(int,int):triangle.UpgradedTriangle@area(int,int,int):44:a + c <= b |==> true
+27:COR:||(boolean,boolean):!=(boolean,boolean):triangle.UpgradedTriangle@area(int,int,int):44:a + b <= c || a + c <= b |==> a + b <= c != a + c <= b
+28:COR:||(boolean,boolean):LHS(boolean,boolean):triangle.UpgradedTriangle@area(int,int,int):44:a + b <= c || a + c <= b |==> a + b <= c
+29:COR:||(boolean,boolean):RHS(boolean,boolean):triangle.UpgradedTriangle@area(int,int,int):44:a + b <= c || a + c <= b |==> a + c <= b
+30:COR:||(boolean,boolean):TRUE(boolean,boolean):triangle.UpgradedTriangle@area(int,int,int):44:a + b <= c || a + c <= b |==> true
+31:AOR:+(int,int):-(int,int):triangle.UpgradedTriangle@area(int,int,int):44:b + c |==> b - c
+32:ROR:<=(int,int):<(int,int):triangle.UpgradedTriangle@area(int,int,int):44:b + c <= a |==> b + c < a
+33:ROR:<=(int,int):==(int,int):triangle.UpgradedTriangle@area(int,int,int):44:b + c <= a |==> b + c == a
+34:ROR:<=(int,int):TRUE(int,int):triangle.UpgradedTriangle@area(int,int,int):44:b + c <= a |==> true
+35:COR:||(boolean,boolean):!=(boolean,boolean):triangle.UpgradedTriangle@area(int,int,int):44:a + b <= c || a + c <= b || b + c <= a |==> (a + b <= c || a + c <= b) != b + c <= a
+36:COR:||(boolean,boolean):LHS(boolean,boolean):triangle.UpgradedTriangle@area(int,int,int):44:a + b <= c || a + c <= b || b + c <= a |==> a + b <= c || a + c <= b
+37:COR:||(boolean,boolean):RHS(boolean,boolean):triangle.UpgradedTriangle@area(int,int,int):44:a + b <= c || a + c <= b || b + c <= a |==> b + c <= a
+38:COR:||(boolean,boolean):TRUE(boolean,boolean):triangle.UpgradedTriangle@area(int,int,int):44:a + b <= c || a + c <= b || b + c <= a |==> true
+39:STD:<RETURN>:<NO-OP>:triangle.UpgradedTriangle@area(int,int,int):45:return 0; |==> <NO-OP>
+40:AOR:+(int,int):-(int,int):triangle.UpgradedTriangle@area(int,int,int):48:a + b |==> a - b
+41:AOR:+(int,int):-(int,int):triangle.UpgradedTriangle@area(int,int,int):48:a + b + c |==> a + b - c
+42:AOR:/(double,double):%(double,double):triangle.UpgradedTriangle@area(int,int,int):48:(a + b + c) / 2.0 |==> (a + b + c) % 2.0
+43:AOR:/(double,double):*(double,double):triangle.UpgradedTriangle@area(int,int,int):48:(a + b + c) / 2.0 |==> (a + b + c) * 2.0
+44:AOR:-(double,double):+(double,double):triangle.UpgradedTriangle@area(int,int,int):49:p - a |==> p + a
+45:AOR:*(double,double):%(double,double):triangle.UpgradedTriangle@area(int,int,int):49:p * (p - a) |==> p % (p - a)
+46:AOR:*(double,double):/(double,double):triangle.UpgradedTriangle@area(int,int,int):49:p * (p - a) |==> p / (p - a)
+47:AOR:-(double,double):+(double,double):triangle.UpgradedTriangle@area(int,int,int):49:p - b |==> p + b
+48:AOR:*(double,double):%(double,double):triangle.UpgradedTriangle@area(int,int,int):49:p * (p - a) * (p - b) |==> p * (p - a) % (p - b)
+49:AOR:*(double,double):/(double,double):triangle.UpgradedTriangle@area(int,int,int):49:p * (p - a) * (p - b) |==> p * (p - a) / (p - b)
+50:AOR:-(double,double):+(double,double):triangle.UpgradedTriangle@area(int,int,int):49:p - c |==> p + c
+51:AOR:*(double,double):%(double,double):triangle.UpgradedTriangle@area(int,int,int):49:p * (p - a) * (p - b) * (p - c) |==> p * (p - a) * (p - b) % (p - c)
+52:AOR:*(double,double):/(double,double):triangle.UpgradedTriangle@area(int,int,int):49:p * (p - a) * (p - b) * (p - c) |==> p * (p - a) * (p - b) / (p - c)
